@@ -1,7 +1,7 @@
 # HelloServlet
 VSCODE test tomcat servlet
 
-## REQUIRED (Special Thanks gio)
+## REQUIRED (Special Thanks [gio](https://github.com/GiorgioDots))
 
 How to install git and heroku without admin rights:
 
