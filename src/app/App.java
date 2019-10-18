@@ -15,7 +15,7 @@ public class App extends HttpServlet{
     private static final long serialVersionUID = -3967314453512919811L;
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello Java");
+        System.out.println("Hello Java 1");
     }
 
     private String mymsg;
