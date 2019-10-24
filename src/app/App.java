@@ -25,12 +25,32 @@ public class App extends HttpServlet{
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException{
-        // Setting up the content type of web page
-        res.setContentType("text/html");
-        // Writing the message on the web page
-        PrintWriter out = res.getWriter();
-        out.println("<h1>" + mymsg + "</h1>");
-        out.println("<p>" + "Hello Friends!" + "</p>");
+      res.setContentType("text/html");
+      PrintWriter out = res.getWriter();
+      String[] dizionario =
+  		{
+  			"Sinonimi: ampio,consistente,ingente. Contrari: esiguo,insufficente,irrisorio.",
+  			"Sinonimi: babbione,babbuasso,balordo. Contrari: acuto,furbo,intelligente.",
+  			"Sinonimi: buzzurro,bifolco,campagnolo. Contrari: galantuomo,persona per bene,signore.",
+  			"Sinoimi: ossequente,rispettoso (di),disciplinato. Contrari: disobediente,ribelle,indomito.",
+  			"Sinoimi: mancante,privo,vuoto. Contrari: carico,pieno,colmo",
+  		};
+      switch(req.getParameter("cerca")){
+        case "abbondante":
+          out.println("<p>" + dizionario[0] + "</p>");
+          break;
+        case "babbeo":
+          out.println("<p>" + dizionario[1] + "</p>");
+          break;
+        case "cafone":
+          out.println("<p>" + dizionario[2] + "</p>");
+          break;
+        case "ubbidiente":
+          out.println("<p>" + dizionario[3] + "</p>");
+          break;
+        case "vacuo":
+          out.println("<p>" + dizionario[4] + "</p>");
+          break;
+      }
     }
-
 }
