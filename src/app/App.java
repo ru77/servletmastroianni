@@ -19,17 +19,17 @@ public class App extends HttpServlet{
     }
 
     private String mymsg;
-    public void init() throws ServletException 
-    {      
-       mymsg = "Http Servlet Demo";   
+    public void init() throws ServletException
+    {
+       mymsg = "Http Servlet Demo";
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException{
-        // Setting up the content type of web page      
+        // Setting up the content type of web page
         res.setContentType("text/html");
-        // Writing the message on the web page      
-        PrintWriter out = res.getWriter();      
-        out.println("<h1>" + mymsg + "</h1>");      
+        // Writing the message on the web page
+        PrintWriter out = res.getWriter();
+        out.println("<h1>" + mymsg + "</h1>");
         out.println("<p>" + "Hello Friends!" + "</p>");
     }
 
